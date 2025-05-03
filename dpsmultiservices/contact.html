@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - DPS Multiservices</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .language-section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <img src="assets/logo.jpeg" alt="DPS Multiservices" />
+      </div>
+      <div class="welcome">
+        <h1 id="main-title">Contate-Nos</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a> | 
+      <a href="services.html">Serviços</a> |
+      <label for="language-select">Escolha o idioma:</label>
+      <select id="language-select">
+        <option value="pt">Português</option>
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section Portugais -->
+    <section id="contact-pt" class="language-section">
+      <h2>Formulário de Contato</h2>
+      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+        <label for="name-pt">Nome:</label><br>
+        <input type="text" id="name-pt" name="name" required><br><br>
+
+        <label for="email-pt">Email:</label><br>
+        <input type="email" id="email-pt" name="email" required><br><br>
+
+        <label for="message-pt">Mensagem:</label><br>
+        <textarea id="message-pt" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+
+    <!-- Section Français -->
+    <section id="contact-fr" class="language-section">
+      <h2>Formulaire de Contact</h2>
+      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+        <label for="name-fr">Nom :</label><br>
+        <input type="text" id="name-fr" name="name" required><br><br>
+
+        <label for="email-fr">Email :</label><br>
+        <input type="email" id="email-fr" name="email" required><br><br>
+
+        <label for="message-fr">Message :</label><br>
+        <textarea id="message-fr" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Envoyer">
+      </form>
+    </section>
+
+    <!-- Section Anglais -->
+    <section id="contact-en" class="language-section">
+      <h2>Contact Form</h2>
+      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+        <label for="name-en">Name:</label><br>
+        <input type="text" id="name-en" name="name" required><br><br>
+
+        <label for="email-en">Email:</label><br>
+        <input type="email" id="email-en" name="email" required><br><br>
+
+        <label for="message-en">Message:</label><br>
+        <textarea id="message-en" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+      </form>
+    </section>
+
+    <!-- Section Espagnol -->
+    <section id="contact-es" class="language-section">
+      <h2>Formulario de Contacto</h2>
+      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+        <label for="name-es">Nombre:</label><br>
+        <input type="text" id="name-es" name="name" required><br><br>
+
+        <label for="email-es">Correo electrónico:</label><br>
+        <input type="email" id="email-es" name="email" required><br><br>
+
+        <label for="message-es">Mensaje:</label><br>
+        <textarea id="message-es" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const languageSelect = document.getElementById('language-select');
+    const mainTitle = document.getElementById('main-title');
+
+    const titles = {
+      pt: 'Contate-Nos',
+      fr: 'Contactez-Nous',
+      en: 'Contact Us',
+      es: 'Contáctenos'
+    };
+
+    function showLanguage(language) {
+      // Masquer toutes les sections
+      const sections = document.querySelectorAll('.language-section');
+      sections.forEach(section => section.style.display = 'none');
+
+      // Afficher la bonne section
+      const selectedSection = document.getElementById('contact-' + language);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+        mainTitle.textContent = titles[language] || 'Contato';
+      }
+    }
+
+    // Langue par défaut : portugais
+    showLanguage('pt');
+
+    // Réagir au changement de langue
+    languageSelect.addEventListener('change', (e) => {
+      showLanguage(e.target.value);
+    });
+  </script>
+</body>
+</html>

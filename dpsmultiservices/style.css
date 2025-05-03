@@ -1,0 +1,99 @@
+/* Estilos gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #ff0000; /* vermelho */
+  color: white;
+  padding: 20px 10px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.welcome h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: white;
+}
+
+/* Navegação */
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav select {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+/* Links em verde */
+a {
+  color: #f0f3f0; /* verde */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f0f3f0; /* verde escuro ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: black;
+}
+
+/* Rodapé */
+footer {
+  background-color: #ff0000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .welcome h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+}
