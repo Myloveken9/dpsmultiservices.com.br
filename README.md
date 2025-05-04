@@ -14,7 +14,7 @@ Site oficial da agência de serviços migratórios **DPS Multiservices**
 - Apoio administrativo e consultoria para migrantes
 
 🖥️ Publicado com [GitHub Pages](https://dpsmultiservices.com)  
-🔗 Domínio personalizado: `dpsmultiservices.com` (registrado com GoDaddy)
+🔗 Domínio personalizado: `dpsmultiservices.com.br` (registrado com GoDaddy)
 
 ---
 
