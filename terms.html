@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Termes d'utilisation du site DPS Multiservices.">
+  <title>DPS Multiservices - Conditions d'utilisation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <img src="assets/logo.jpeg" alt="Logo da DPS Multiservices" />
+      </div>
+      <div class="welcome">
+        <h1 id="pageIntro">Nous vous invitons à consulter nos conditions d'utilisation.</h1>
+      </div>
+    </div>
+    <nav>
+      <label for="languageSelect">🌐 Langue:</label>
+      <select id="languageSelect">
+        <option value="fr" selected>Français 🇫🇷</option>
+        <option value="pt">Português 🇧🇷</option>
+        <option value="en">English 🇺🇸</option>
+        <option value="es">Español 🇪🇸</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="introTitle">Introduction</h2>
+      <p id="introText">Les présentes conditions d'utilisation régissent l'accès et l'utilisation de notre site internet. En accédant à ce site, vous acceptez ces conditions.</p>
+    </section>
+
+    <section>
+      <h2 id="useTitle">Utilisation du site</h2>
+      <p id="useText">Vous vous engagez à utiliser ce site conformément aux lois en vigueur et à ne pas le perturber ou l'utiliser de manière abusive.</p>
+    </section>
+
+    <section>
+      <h2 id="ipTitle">Propriété intellectuelle</h2>
+      <p id="ipText">Tout le contenu de ce site est protégé par les droits d'auteur et appartient à DPS Multiservices ou à ses partenaires.</p>
+    </section>
+
+    <section>
+      <h2 id="linksTitle">Liens externes</h2>
+      <p id="linksText">Nous ne sommes pas responsables du contenu des sites externes liés depuis notre site.</p>
+    </section>
+
+    <section>
+      <h2 id="liabilityTitle">Limitation de responsabilité</h2>
+      <p id="liabilityText">Nous ne garantissons pas l'exactitude des informations fournies et ne serons pas responsables de leur utilisation.</p>
+    </section>
+
+    <section>
+      <h2 id="changesTitle">Modifications des conditions</h2>
+      <p id="changesText">Nous nous réservons le droit de modifier ces conditions à tout moment sans préavis.</p>
+    </section>
+
+    <section>
+      <h2 id="contactTitle">Contact</h2>
+      <p id="contactText">Pour toute question, contactez-nous à : <strong>multiservicessp2023@gmail.com</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="index.html" id="backHome">Retour à l'accueil</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    const translations = {
+      fr: {
+        pageIntro: "Nous vous invitons à consulter nos conditions d'utilisation.",
+        introTitle: "Introduction",
+        introText: "Les présentes conditions d'utilisation régissent l'accès et l'utilisation de notre site internet. En accédant à ce site, vous acceptez ces conditions.",
+        useTitle: "Utilisation du site",
+        useText: "Vous vous engagez à utiliser ce site conformément aux lois en vigueur et à ne pas le perturber ou l'utiliser de manière abusive.",
+        ipTitle: "Propriété intellectuelle",
+        ipText: "Tout le contenu de ce site est protégé par les droits d'auteur et appartient à DPS Multiservices ou à ses partenaires.",
+        linksTitle: "Liens externes",
+        linksText: "Nous ne sommes pas responsables du contenu des sites externes liés depuis notre site.",
+        liabilityTitle: "Limitation de responsabilité",
+        liabilityText: "Nous ne garantissons pas l'exactitude des informations fournies et ne serons pas responsables de leur utilisation.",
+        changesTitle: "Modifications des conditions",
+        changesText: "Nous nous réservons le droit de modifier ces conditions à tout moment sans préavis.",
+        contactTitle: "Contact",
+        contactText: "Pour toute question, contactez-nous à : <strong>multiservicessp2023@gmail.com</strong>",
+        backHome: "Retour à l'accueil"
+      },
+      pt: {
+        pageIntro: "Consulte nossos termos de uso.",
+        introTitle: "Introdução",
+        introText: "Estes termos regulam o uso e acesso ao nosso site. Ao acessá-lo, você aceita estes termos.",
+        useTitle: "Uso do site",
+        useText: "Você se compromete a usar este site conforme a legislação vigente e sem prejudicar seu funcionamento.",
+        ipTitle: "Propriedade intelectual",
+        ipText: "Todo o conteúdo deste site é protegido por direitos autorais e pertence à DPS Multiservices ou parceiros.",
+        linksTitle: "Links externos",
+        linksText: "Não nos responsabilizamos pelo conteúdo de sites externos vinculados ao nosso.",
+        liabilityTitle: "Limitação de responsabilidade",
+        liabilityText: "Não garantimos a precisão total das informações e não nos responsabilizamos pelo uso delas.",
+        changesTitle: "Modificações dos termos",
+        changesText: "Reservamo-nos o direito de alterar estes termos a qualquer momento sem aviso prévio.",
+        contactTitle: "Contato",
+        contactText: "Em caso de dúvidas, entre em contato: <strong>multiservicessp2023@gmail.com</strong>",
+        backHome: "Voltar para a página inicial"
+      },
+      en: {
+        pageIntro: "Please review our terms of use.",
+        introTitle: "Introduction",
+        introText: "These terms govern the access and use of our website. By accessing it, you agree to these conditions.",
+        useTitle: "Use of the site",
+        useText: "You agree to use this site in accordance with applicable laws and not to disrupt or misuse it.",
+        ipTitle: "Intellectual property",
+        ipText: "All content on this site is protected by copyright and belongs to DPS Multiservices or its partners.",
+        linksTitle: "External links",
+        linksText: "We are not responsible for the content of external websites linked from ours.",
+        liabilityTitle: "Limitation of liability",
+        liabilityText: "We do not guarantee complete accuracy of the information and disclaim liability for its use.",
+        changesTitle: "Changes to the terms",
+        changesText: "We reserve the right to change these terms at any time without notice.",
+        contactTitle: "Contact",
+        contactText: "For questions, contact us at: <strong>multiservicessp2023@gmail.com</strong>",
+        backHome: "Back to homepage"
+      },
+      es: {
+        pageIntro: "Lea nuestros términos de uso.",
+        introTitle: "Introducción",
+        introText: "Estos términos regulan el acceso y uso de nuestro sitio. Al acceder, usted acepta estas condiciones.",
+        useTitle: "Uso del sitio",
+        useText: "Se compromete a utilizar este sitio conforme a la ley y sin perturbar o abusar de su funcionamiento.",
+        ipTitle: "Propiedad intelectual",
+        ipText: "Todo el contenido de este sitio está protegido por derechos de autor y pertenece a DPS Multiservices o sus socios.",
+        linksTitle: "Enlaces externos",
+        linksText: "No nos responsabilizamos del contenido de sitios externos vinculados desde nuestro sitio.",
+        liabilityTitle: "Limitación de responsabilidad",
+        liabilityText: "No garantizamos la precisión total de la información ni nos responsabilizamos por su uso.",
+        changesTitle: "Cambios en los términos",
+        changesText: "Nos reservamos el derecho de modificar estos términos en cualquier momento sin previo aviso.",
+        contactTitle: "Contacto",
+        contactText: "Si tiene preguntas, contáctenos en: <strong>multiservicessp2023@gmail.com</strong>",
+        backHome: "Volver al inicio"
+      }
+    };
+  
+    const languageSelect = document.getElementById("languageSelect");
+  
+    languageSelect.addEventListener("change", () => {
+      const lang = languageSelect.value;
+      const t = translations[lang];
+      if (!t) return;
+  
+      document.getElementById("pageIntro").textContent = t.pageIntro;
+      document.getElementById("introTitle").textContent = t.introTitle;
+      document.getElementById("introText").textContent = t.introText;
+      document.getElementById("useTitle").textContent = t.useTitle;
+      document.getElementById("useText").textContent = t.useText;
+      document.getElementById("ipTitle").textContent = t.ipTitle;
+      document.getElementById("ipText").textContent = t.ipText;
+      document.getElementById("linksTitle").textContent = t.linksTitle;
+      document.getElementById("linksText").textContent = t.linksText;
+      document.getElementById("liabilityTitle").textContent = t.liabilityTitle;
+      document.getElementById("liabilityText").textContent = t.liabilityText;
+      document.getElementById("changesTitle").textContent = t.changesTitle;
+      document.getElementById("changesText").textContent = t.changesText;
+      document.getElementById("contactTitle").textContent = t.contactTitle;
+      document.getElementById("contactText").innerHTML = t.contactText;
+      document.getElementById("backHome").textContent = t.backHome;
+    });
+  </script>
+  

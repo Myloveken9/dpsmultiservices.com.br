@@ -9,6 +9,10 @@
     .language-section {
       display: none;
     }
+    .form-message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -24,22 +28,26 @@
     <nav>
       <label for="languageSelect">🌐 Idioma:</label>
       <select id="languageSelect">
-        <option value="pt" selected>Português 🇧🇷</option>
+        <option value="pt">Português 🇧🇷</option>
         <option value="en">English 🇺🇸</option>
         <option value="fr">Français 🇫🇷</option>
         <option value="es">Español 🇪🇸</option>
       </select>
     </nav>
   </header>
-  <nav>
-    <h2><a href="index.html">Accueil</a> | 
-      <a href="services.html">Serviços</a> | </h2>
+
+  <nav class="main-nav">
+    <h2>
+      <a href="index.html">Início</a> | 
+      <a href="services.html">Serviços</a>
+    </h2>
   </nav>
+
   <main>
-    <!-- Sections de formulaire multilingues -->
+    <!-- Português -->
     <section id="contact-pt" class="language-section">
       <h2>Formulário de Contato</h2>
-      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+      <form action="https://formspree.io/f/xwpoljog" method="POST">
         <label for="name-pt">Nome:</label><br>
         <input type="text" id="name-pt" name="name" required><br><br>
 
@@ -51,11 +59,13 @@
 
         <input type="submit" value="Enviar">
       </form>
+      <div class="form-message"></div>
     </section>
 
+    <!-- Francês -->
     <section id="contact-fr" class="language-section">
       <h2>Formulaire de Contact</h2>
-      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+      <form action="https://formspree.io/f/xwpoljog" method="POST">
         <label for="name-fr">Nom :</label><br>
         <input type="text" id="name-fr" name="name" required><br><br>
 
@@ -67,11 +77,13 @@
 
         <input type="submit" value="Envoyer">
       </form>
+      <div class="form-message"></div>
     </section>
 
+    <!-- Inglês -->
     <section id="contact-en" class="language-section">
       <h2>Contact Form</h2>
-      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+      <form action="https://formspree.io/f/xwpoljog" method="POST">
         <label for="name-en">Name:</label><br>
         <input type="text" id="name-en" name="name" required><br><br>
 
@@ -83,11 +95,13 @@
 
         <input type="submit" value="Send">
       </form>
+      <div class="form-message"></div>
     </section>
 
+    <!-- Espanhol -->
     <section id="contact-es" class="language-section">
       <h2>Formulario de Contacto</h2>
-      <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
+      <form action="https://formspree.io/f/xwpoljog" method="POST">
         <label for="name-es">Nombre:</label><br>
         <input type="text" id="name-es" name="name" required><br><br>
 
@@ -99,6 +113,7 @@
 
         <input type="submit" value="Enviar">
       </form>
+      <div class="form-message"></div>
     </section>
   </main>
 
@@ -107,32 +122,69 @@
   </footer>
 
   <script>
-    // ✅ Correction ici
     const languageSelect = document.getElementById('languageSelect');
     const mainTitle = document.getElementById('main-title');
 
     const titles = {
       pt: 'Contate-Nos',
-      fr: 'Contactez-Nous',
       en: 'Contact Us',
+      fr: 'Contactez-Nous',
       es: 'Contáctenos'
     };
 
     function showLanguage(language) {
-      const sections = document.querySelectorAll('.language-section');
-      sections.forEach(section => section.style.display = 'none');
+      document.querySelectorAll('.language-section').forEach(section => {
+        section.style.display = 'none';
+      });
 
-      const selectedSection = document.getElementById('contact-' + language);
-      if (selectedSection) {
-        selectedSection.style.display = 'block';
-        mainTitle.textContent = titles[language] || 'Contato';
+      const activeSection = document.getElementById('contact-' + language);
+      if (activeSection) {
+        activeSection.style.display = 'block';
       }
+
+      mainTitle.textContent = titles[language] || 'Contato';
     }
 
-    showLanguage('pt');
+    const userLang = navigator.language.slice(0, 2);
+    const defaultLang = ['pt', 'en', 'fr', 'es'].includes(userLang) ? userLang : 'pt';
+
+    languageSelect.value = defaultLang;
+    showLanguage(defaultLang);
 
     languageSelect.addEventListener('change', (e) => {
       showLanguage(e.target.value);
+    });
+
+    // Intercepter les envois et afficher un message dynamique
+    const forms = document.querySelectorAll("form");
+
+    forms.forEach(form => {
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const messageBox = form.nextElementSibling;
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            messageBox.textContent = "✅ Merci ! Votre message a bien été envoyé.";
+            messageBox.style.color = "green";
+            form.reset();
+          } else {
+            messageBox.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
+            messageBox.style.color = "red";
+          }
+        } catch (error) {
+          messageBox.textContent = "⚠️ Erreur réseau. Vérifiez votre connexion.";
+          messageBox.style.color = "orange";
+        }
+      });
     });
   </script>
 </body>

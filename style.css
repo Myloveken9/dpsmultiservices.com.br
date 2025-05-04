@@ -1,119 +1,121 @@
-/* Estilos gerais */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f5f7fa;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
+  padding: 0 15px;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #2314a1; /* vermelho */
-  color: rgb(255, 255, 255);
-  padding: 10px 10px; /* Réduit l'épaisseur de l'en-tête */
+  background-color: #007cad;
+  color: #fff;
+  padding: 20px 0;
 }
 
 .header-top {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* logo à gauche, titre à droite (ou centré en mobile) */
-  padding: 0 20px 5px 20px; /* Moins de padding bas */
-  flex-wrap: wrap;
-}
-
-.logo {
-  flex-shrink: 0;
+  text-align: center;
 }
 
 .logo img {
-  height: 40px; /* Logo plus petit */
+  max-width: 120px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.welcome {
-  flex: 1;
-  text-align: center;
-}
-
-.welcome h1 {
-  font-size: 1.5rem; /* Titre plus petit */
-  margin: 0;
-  color: white;
-}
-
-/* Navegação */
 nav {
-  text-align: center;
-  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaecec;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
+nav label,
 nav select {
+  color: #044049de;
   font-size: 1rem;
-  padding: 5px;
+  margin: 0 10px;
 }
 
-/* Links */
-a {
-  color: #2314a1;
+.main-nav {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.main-nav a {
   text-decoration: none;
+  color: #06abb1;
+  ;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
-a:hover {
-  color: #ff0000;
+.main-nav a:hover {
   text-decoration: underline;
 }
 
 /* Conteúdo principal */
 main {
   max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-h2 {
-  color: black;
+section h2 {
+  color: #06abb1;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 /* Rodapé */
 footer {
-  background-color: #2314a1;
-  color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 15px;
+  background-color: #007cad;
+  color: #fff;
+  margin-top: 40px;
+  border-top: 3px solid #002f6c;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
   .header-top {
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
   }
 
-  .logo {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 5px;
+  .main-nav {
+    font-size: 0.95rem;
   }
 
-  .welcome {
-    width: 100%;
-    text-align: center;
-  }
-
-  .logo img {
-    height: 35px; /* encore plus petit sur mobile */
-  }
-
-  .welcome h1 {
-    font-size: 1.3rem; /* plus petit sur mobile */
+  nav select {
+    margin-top: 10px;
   }
 
   main {
-    padding: 20px 10px;
+    padding: 20px;
   }
 }

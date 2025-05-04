@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Consultoria migratória, vistos, cidadania e muito mais. Atendimento em português, inglês, francês e espanhol.">
   <title>DPS Multiservices - Agência de Serviços Migratórios</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,7 +11,7 @@
   <header>
     <div class="header-top">
       <div class="logo">
-        <img src="assets/logo.jpeg" alt="DPS Multiservices" />
+        <img src="assets/logo.jpeg" alt="Logo da DPS Multiservices" />
       </div>
       <div class="welcome">
         <h1 id="welcomeText">Bem-vindo à DPS Multiservices</h1>
@@ -26,15 +27,19 @@
       </select>
     </nav>
   </header>
-  <nav>
-    <h2><a href="services.html">Services</a> | 
-      <a href="contact.html">Contact</a></h1>
-  </nav>
+
+  <!-- Corrigido: trocada <nav> duplicada por section -->
+  <section class="main-nav">
+    <h2>
+      <a href="services.html">Services</a> | 
+      <a href="contact.html">Contact</a>
+    </h2>
+  </section>
 
   <main>
     <section id="services">
-      <h2>Nossos Serviços</h2>
-      <ul>
+      <h2 id="servicesTitle">Nossos Serviços</h2>
+      <ul id="servicesList">
         <li>Consultoria para imigração</li>
         <li>Assistência com vistos</li>
         <li>Traduções juramentadas</li>
@@ -43,24 +48,31 @@
         <li>Assessoria em processos de cidadania</li>
         <li>Orientação sobre documentação necessária</li>
         <li>Consultoria para obtenção de passaporte</li>
+      </ul>
     </section>
 
     <section id="about">
-      <h2>Sobre Nós</h2>
-      <p>DPS Multiservices é uma agência especializada em serviços migratórios, oferecendo assessoria especializada e atendimento personalizado para cada cliente. Nossa missão é facilitar os processos administrativos, legais e pessoais relacionados à imigração, garantindo um serviço de alta qualidade, sigiloso e adaptado às necessidades individuais. Trabalhamos com profissionalismo, empatia e compromisso para assegurar que nossos clientes tenham uma jornada migratória tranquila, transparente e em conformidade com as exigências legais do país de destino.</p>
+      <h2 id="aboutTitle">Sobre Nós</h2>
+      <p id="aboutText">
+        DPS Multiservices é uma agência especializada em serviços migratórios, oferecendo assessoria especializada e atendimento personalizado para cada cliente. Nossa missão é facilitar os processos administrativos, legais e pessoais relacionados à imigração, garantindo um serviço de alta qualidade, sigiloso e adaptado às necessidades individuais. Trabalhamos com profissionalismo, empatia e compromisso para assegurar que nossos clientes tenham uma jornada migratória tranquila, transparente e em conformidade com as exigências legais do país de destino.
+      </p>
     </section>
 
     <section id="contact">
-      <h2>Contato</h2>
-      <p>Email: multiservicessp2023@gmail.com</p>
-      <p>Telefone: +55 (11) 95348-2936</p>
+      <h2 id="contactTitle">Contato</h2>
+      <p id="emailText">Email: multiservicessp2023@gmail.com</p>
+      <p id="phoneText">Telefone: +55 (11) 95348-2936</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
+    <p id="footerText">&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
+    <a href="privacy-policy.html">Política de Privacidade</a> | 
+    <a href="terms.html">Termos de Uso</a>
+  
   </footer>
 
+  <!-- Script de tradução -->
   <script>
     const translations = {
       pt: {
@@ -76,8 +88,10 @@
         aboutText: "DPS Multiservices é uma agência especializada em serviços migratórios, oferecendo assessoria especializada e atendimento personalizado para cada cliente. Nossa missão é facilitar os processos administrativos, legais e pessoais relacionados à imigração, garantindo um serviço de alta qualidade, sigiloso e adaptado às necessidades individuais. Trabalhamos com profissionalismo, empatia e compromisso para assegurar que nossos clientes tenham uma jornada migratória tranquila, transparente e em conformidade com as exigências legais do país de destino.",
         contactTitle: "Contato",
         emailText: "Email: multiservicessp2023@gmail.com",
-        phoneText: "Telefone: +55 (11) 95348-2936",
-        footerText: "© 2025 DPS Multiservices. Todos os direitos reservados."
+phoneText: "Telefone: +55 (11) 95348-2936",
+footerText: "© 2025 DPS Multiservices. Todos os direitos reservados. Política de Privacidade | Termos de Uso"
+
+
       },
       en: {
         welcomeText: "Welcome to DPS Multiservices",
@@ -89,11 +103,11 @@
           "Legal support"
         ],
         aboutTitle: "About Us",
-        aboutText: "DPS Multiservices is an agency specialized in immigration services, providing in-depth expertise and personalized support for every client. Our mission is to simplify administrative, legal, and personal procedures related to immigration, ensuring high-quality, confidential, and tailored service. We work with professionalism, empathy, and precision to guide our clients through a smooth and compliant migration process that meets the legal standards of their destination country..",
+        aboutText: "DPS Multiservices is an agency specialized in immigration services, providing in-depth expertise and personalized support for every client. Our mission is to simplify administrative, legal, and personal procedures related to immigration, ensuring high-quality, confidential, and tailored service. We work with professionalism, empathy, and precision to guide our clients through a smooth and compliant migration process that meets the legal standards of their destination country.",
         contactTitle: "Contact",
         emailText: "Email: multiservicessp2023@gmail.com",
         phoneText: "Phone: +55 (11) 95348-2936",
-        footerText: "© 2025 DPS Multiservices. All rights reserved."
+        footerText: "© 2025 DPS Multiservices. All rights reserved. Privacy Policy | Terms of Use"
       },
       fr: {
         welcomeText: "Bienvenue chez DPS Multiservices",
@@ -107,9 +121,9 @@
         aboutTitle: "À propos de nous",
         aboutText: "DPS Multiservices est une agence spécialisée dans les services migratoires, offrant une expertise approfondie et un accompagnement personnalisé à chaque client. Notre mission est de faciliter les démarches administratives, juridiques et personnelles liées à l'immigration, en garantissant un service de qualité, confidentiel et adapté à chaque situation. Nous travaillons avec rigueur, empathie et professionnalisme afin d'assurer à nos clients un parcours migratoire clair, serein et conforme aux exigences légales de leur pays de destination.",
         contactTitle: "Contact",
-        emailText: "Email : dpsmultiservicessp@gmail.com",
+        emailText: "Email : multiservicessp2023@gmail.com",
         phoneText: "Téléphone : +55 (11) 95348-2936",
-        footerText: "© 2025 DPS Multiservices. Tous droits réservés."
+        footerText: "© 2025 DPS Multiservices. Tous droits réservés. Politique de confidentialité | Conditions d'utilisation"
       },
       es: {
         welcomeText: "Bienvenido a DPS Multiservices",
@@ -123,9 +137,9 @@
         aboutTitle: "Sobre Nosotros",
         aboutText: "DPS Multiservices es una agencia especializada en servicios migratorios, que ofrece asesoramiento experto y atención personalizada a cada cliente. Nuestra misión es facilitar todos los trámites administrativos, legales y personales relacionados con la inmigración, garantizando un servicio de calidad, confidencial y adaptado a cada situación individual. Trabajamos con profesionalismo, empatía y compromiso para asegurar que nuestros clientes vivan un proceso migratorio claro, tranquilo y conforme a las normativas legales del país de destino.",
         contactTitle: "Contacto",
-        emailText: "Correo: dpsmultiservicessp@gmail.com",
+        emailText: "Correo: multiservicessp2023@gmail.com",
         phoneText: "Teléfono: +55 (11) 95348-2936",
-        footerText: "© 2025 DPS Multiservices. Todos los derechos reservados."
+        footerText: "© 2025 DPS Multiservices. Todos los derechos reservados., politica de privacidad | Términos de uso"
       }
     };
 
@@ -136,9 +150,9 @@
       const t = translations[lang];
 
       document.getElementById("welcomeText").textContent = t.welcomeText;
-      document.getElementById("services").querySelector("h2").textContent = t.servicesTitle;
+      document.getElementById("servicesTitle").textContent = t.servicesTitle;
 
-      const servicesList = document.getElementById("services").querySelector("ul");
+      const servicesList = document.getElementById("servicesList");
       servicesList.innerHTML = "";
       t.servicesList.forEach(service => {
         const li = document.createElement("li");
@@ -146,14 +160,14 @@
         servicesList.appendChild(li);
       });
 
-      document.getElementById("about").querySelector("h2").textContent = t.aboutTitle;
-      document.getElementById("about").querySelector("p").textContent = t.aboutText;
+      document.getElementById("aboutTitle").textContent = t.aboutTitle;
+      document.getElementById("aboutText").textContent = t.aboutText;
 
-      document.getElementById("contact").querySelector("h2").textContent = t.contactTitle;
-      document.getElementById("contact").querySelectorAll("p")[0].textContent = t.emailText;
-      document.getElementById("contact").querySelectorAll("p")[1].textContent = t.phoneText;
+      document.getElementById("contactTitle").textContent = t.contactTitle;
+      document.getElementById("emailText").textContent = t.emailText;
+      document.getElementById("phoneText").textContent = t.phoneText;
 
-      document.querySelector("footer p").textContent = t.footerText;
+      document.getElementById("footerText").textContent = t.footerText;
     });
   </script>
 </body>
