@@ -9,26 +9,34 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: #ff0000; /* vermelho */
-  color: white;
-  padding: 20px 10px;
+  background-color: #2314a1; /* vermelho */
+  color: rgb(255, 255, 255);
+  padding: 10px 10px; /* Réduit l'épaisseur de l'en-tête */
 }
 
 .header-top {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* logo à gauche, titre à droite (ou centré en mobile) */
+  padding: 0 20px 5px 20px; /* Moins de padding bas */
   flex-wrap: wrap;
-  gap: 20px;
-  padding-bottom: 10px;
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .logo img {
-  height: 60px;
+  height: 40px; /* Logo plus petit */
+}
+
+.welcome {
+  flex: 1;
+  text-align: center;
 }
 
 .welcome h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Titre plus petit */
   margin: 0;
   color: white;
 }
@@ -44,14 +52,14 @@ nav select {
   padding: 5px;
 }
 
-/* Links em verde */
+/* Links */
 a {
-  color: #f0f3f0; /* verde */
+  color: #2314a1;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f0f3f0; /* verde escuro ao passar o mouse */
+  color: #ff0000;
   text-decoration: underline;
 }
 
@@ -72,7 +80,7 @@ h2 {
 
 /* Rodapé */
 footer {
-  background-color: #ff0000;
+  background-color: #2314a1;
   color: white;
   text-align: center;
   padding: 1rem;
@@ -82,15 +90,27 @@ footer {
 @media (max-width: 768px) {
   .header-top {
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .welcome {
+    width: 100%;
     text-align: center;
   }
 
   .logo img {
-    height: 50px;
+    height: 35px; /* encore plus petit sur mobile */
   }
 
   .welcome h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* plus petit sur mobile */
   }
 
   main {

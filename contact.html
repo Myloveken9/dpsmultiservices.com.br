@@ -22,20 +22,21 @@
       </div>
     </div>
     <nav>
-      <a href="index.html">Início</a> | 
-      <a href="services.html">Serviços</a> |
-      <label for="language-select">Escolha o idioma:</label>
-      <select id="language-select">
-        <option value="pt">Português</option>
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-        <option value="es">Español</option>
+      <label for="languageSelect">🌐 Idioma:</label>
+      <select id="languageSelect">
+        <option value="pt" selected>Português 🇧🇷</option>
+        <option value="en">English 🇺🇸</option>
+        <option value="fr">Français 🇫🇷</option>
+        <option value="es">Español 🇪🇸</option>
       </select>
     </nav>
   </header>
-
+  <nav>
+    <h2><a href="index.html">Accueil</a> | 
+      <a href="services.html">Serviços</a> | </h2>
+  </nav>
   <main>
-    <!-- Section Portugais -->
+    <!-- Sections de formulaire multilingues -->
     <section id="contact-pt" class="language-section">
       <h2>Formulário de Contato</h2>
       <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
@@ -52,7 +53,6 @@
       </form>
     </section>
 
-    <!-- Section Français -->
     <section id="contact-fr" class="language-section">
       <h2>Formulaire de Contact</h2>
       <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
@@ -69,7 +69,6 @@
       </form>
     </section>
 
-    <!-- Section Anglais -->
     <section id="contact-en" class="language-section">
       <h2>Contact Form</h2>
       <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
@@ -86,7 +85,6 @@
       </form>
     </section>
 
-    <!-- Section Espagnol -->
     <section id="contact-es" class="language-section">
       <h2>Formulario de Contacto</h2>
       <form action="mailto:multiservicessp2023@gmail.com" method="post" enctype="text/plain">
@@ -109,7 +107,8 @@
   </footer>
 
   <script>
-    const languageSelect = document.getElementById('language-select');
+    // ✅ Correction ici
+    const languageSelect = document.getElementById('languageSelect');
     const mainTitle = document.getElementById('main-title');
 
     const titles = {
@@ -120,11 +119,9 @@
     };
 
     function showLanguage(language) {
-      // Masquer toutes les sections
       const sections = document.querySelectorAll('.language-section');
       sections.forEach(section => section.style.display = 'none');
 
-      // Afficher la bonne section
       const selectedSection = document.getElementById('contact-' + language);
       if (selectedSection) {
         selectedSection.style.display = 'block';
@@ -132,10 +129,8 @@
       }
     }
 
-    // Langue par défaut : portugais
     showLanguage('pt');
 
-    // Réagir au changement de langue
     languageSelect.addEventListener('change', (e) => {
       showLanguage(e.target.value);
     });
