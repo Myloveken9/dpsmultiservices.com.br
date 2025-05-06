@@ -193,3 +193,35 @@ footer {
 .btn-card:hover {
   background-color: #005f73;
 }
+
+
+/* Styles généraux pour les images */
+img {
+  max-width: 100%;  /* Les images ne dépasseront pas la largeur de leur conteneur */
+  height: auto;     /* Laissez la hauteur ajustée proportionnellement */
+  display: block;   /* Cela supprime l'espace sous les images */
+  margin: 0 auto;   /* Centre les images si nécessaire */
+}
+
+/* Styles spécifiques pour les images dans la section Quem Somos */
+#quemSomos .images-container img {
+  width: 45%;  /* Réduit la taille des images à 45% de la largeur du conteneur */
+  margin: 10px; /* Ajoute de l'espace autour des images */
+  border-radius: 8px; /* Ajoute des bords arrondis pour un aspect plus élégant */
+}
+
+/* Pour assurer que les images dans un conteneur .images-container soient alignées */
+#quemSomos .images-container {
+  display: flex;              /* Utilise le Flexbox pour l'alignement */
+  justify-content: space-between; /* Espace égal entre les images */
+  gap: 20px;                  /* Ajoute un espacement entre les images */
+  flex-wrap: wrap;            /* Permet aux images de se réorganiser sur des écrans plus petits */
+}
+
+/* Pour les petits écrans (tablettes et mobiles) */
+@media (max-width: 768px) {
+  #quemSomos .images-container img {
+    width: 100%;   /* Les images prennent toute la largeur de leur conteneur */
+    margin-bottom: 20px;  /* Ajoute de l'espace en bas pour les séparer si elles sont empilées */
+  }
+}

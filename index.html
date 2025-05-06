@@ -97,6 +97,23 @@
       </p>
     </section>
 
+    <!-- Nouvelle section ajoutée -->
+    <section class="additional-section">
+      <div class="content">
+        <img src="assets/Dps.jpg" alt="." />
+        <h3 id="financialServicesTitle">O que nós oferecemos</h3>
+        <p id="financialServicesText">
+          Oferecemos soluções migratórias sob medida, combinando expertise jurídica e suporte personalizado para uma mobilidade bem-sucedida.     </p>
+      </div>
+      <div class="content">
+        <img src="assets/administration.jpg" alt="Transferts internationaux" />
+        <h3 id="internationalTransfersTitle">O que nós oferecemos</h3>
+        <p id="internationalTransfersText">
+          Facilite suas transferências de dinheiro internacionais com nosso serviço rápido e seguro. Colaboramos com parceiros confiáveis para garantir a segurança de suas transações.
+        </p>
+      </div>
+    </section>
+
     <section class="quick-links">
       <h2 id="exploreTitle">Explore mais</h2>
       <div class="link-buttons">
@@ -170,6 +187,10 @@
   <script>
     const translations = {
       pt: {
+        financialServicesTitle: "O que nós oferecemos",
+        financialServicesText: "Oferecemos soluções migratórias sob medida, combinando expertise jurídica e suporte personalizado para uma mobilidade bem-sucedida.",
+        internationalTransfersTitle: "O que nós oferecemos",
+        internationalTransfersText: "Facilite suas transferências de dinheiro internacionais com nosso serviço rápido e seguro. Colaboramos com parceiros confiáveis para garantir a segurança de suas transações.",
         mapTitle: "Encontre-nos",
         exploreTitle: "Explore mais",
         servicesLinkText: "Veja nossos Serviços",
@@ -195,6 +216,10 @@
         footerText: "© 2025 DPS Multiservices. Todos os direitos reservados. Política de privacidade | Termos de uso"
       },
       en: {
+        financialServicesTitle: "What We Offer",
+        financialServicesText: "We provide tailored migration solutions, combining legal expertise and personalized support for successful mobility.",
+        internationalTransfersTitle: "What We Offer",
+        internationalTransfersText: "Easily facilitate your international money transfers with our fast and secure service. We collaborate with trusted partners to ensure the security of your transactions.",
         mapTitle: "Find Us",
         exploreTitle: "Explore more",
         servicesLinkText: "See our Services",
@@ -220,6 +245,10 @@
         footerText: "© 2025 DPS Multiservices. All rights reserved. Privacy Policy | Terms of Use"
       },
       fr: {
+        financialServicesTitle: "Ce que nous proposons",
+        financialServicesText: "Nous offrons des solutions migratoires sur mesure, alliant expertise juridique et accompagnement personnalisé pour une mobilité réussie.",
+        internationalTransfersTitle: "Ce que nous proposons",
+        internationalTransfersText: "Facilitez vos transferts d'argent à l'international avec notre service rapide et sécurisé. Nous collaborons avec des partenaires de confiance pour assurer la sécurité de vos transactions.",
         mapTitle: "Trouvez-nous",
         exploreTitle: "Explorez plus",
         servicesLinkText: "Voir nos Services",
@@ -245,6 +274,10 @@
         footerText: "© 2025 DPS Multiservices. Tous droits réservés. Politique de confidentialité | Conditions d'utilisation"
       },
       es: {
+        financialServicesTitle: "Lo que ofrecemos",
+        financialServicesText: "Ofrecemos soluciones migratorias a medida, combinando experiencia jurídica y apoyo personalizado para una movilidad exitosa.",
+        internationalTransfersTitle: "Lo que ofrecemos",
+        internationalTransfersText: "Facilite sus transferencias de dinero internacionales con nuestro servicio rápido y seguro. Colaboramos con socios de confianza para garantizar la seguridad de sus transacciones.",
         mapTitle: "Encuéntranos",
         exploreTitle: "Explorar más",
         servicesLinkText: "Ver nuestros Servicios",
@@ -276,7 +309,11 @@
     languageSelect.addEventListener("change", () => {
       const lang = languageSelect.value;
       const t = translations[lang];
-
+    
+      document.getElementById("financialServicesTitle").textContent = t.financialServicesTitle;
+      document.getElementById("financialServicesText").innerHTML = t.financialServicesText;
+      document.getElementById("internationalTransfersTitle").textContent = t.internationalTransfersTitle;
+      document.getElementById("internationalTransfersText").innerHTML = t.internationalTransfersText;
       document.getElementById("mapTitle").textContent = t.mapTitle;
       document.getElementById("exploreTitle").textContent = t.exploreTitle;
       document.getElementById("servicesLinkText").textContent = t.servicesLinkText;
