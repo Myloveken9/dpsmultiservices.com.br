@@ -6,6 +6,67 @@
   <meta name="description" content="Consultoria migratória, vistos, cidadania e muito mais. Atendimento em português, inglês, francês e espanhol.">
   <title>DPS Multiservices - Agência de Serviços Migratórios</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #toggleHoursBtn {
+      background-color: transparent;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      color: #007BFF;
+    }
+    #toggleHoursBtn:hover {
+      text-decoration: underline;
+    }
+    #hoursSection {
+      display: none;
+      padding: 1em;
+      background: #f8f8f8;
+      border-left: 4px solid #007BFF;
+      margin: 1em;
+    }
+    .quick-links {
+      text-align: center;
+      margin: 3em 1em;
+    }
+    .quick-links h2 {
+      font-size: 1.6em;
+      margin-bottom: 1em;
+    }
+    .link-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+    .btn-link {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid #ccc;
+      padding: 1em;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 200px;
+    }
+    .btn-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .btn-link img {
+      width: 100%;
+      height: auto;
+      max-height: 120px;
+      object-fit: cover;
+      margin-bottom: 0.5em;
+      border-radius: 6px;
+    }
+    .btn-link span {
+      display: block;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,118 +89,185 @@
     </nav>
   </header>
 
-  <!-- Corrigido: trocada <nav> duplicada por section -->
-  <section class="main-nav">
-    <h2>
-      <a href="services.html">Services</a> | 
-      <a href="contact.html">Contact</a>
-    </h2>
-  </section>
-
   <main>
-    <section id="services">
-      <h2 id="servicesTitle">Nossos Serviços</h2>
-      <ul id="servicesList">
-        <li>Consultoria para imigração</li>
-        <li>Assistência com vistos</li>
-        <li>Traduções juramentadas</li>
-        <li>Apoio jurídico</li>
-        <li>Serviços de Naturalização</li>
-        <li>Assessoria em processos de cidadania</li>
-        <li>Orientação sobre documentação necessária</li>
-        <li>Consultoria para obtenção de passaporte</li>
+    <section class="about-us">
+      <h2 id="aboutTitle">Quem Somos</h2>
+      <p id="aboutText">
+        A <strong>DPS Multiservices</strong> é uma empresa dedicada a facilitar serviços financeiros confiáveis, com foco em transferências internacionais de dinheiro.
+      </p>
+    </section>
+
+    <section class="quick-links">
+      <h2 id="exploreTitle">Explore mais</h2>
+      <div class="link-buttons">
+        <a href="services.html" class="btn-link">
+          <img src="assets/administratif.jpg" alt="Serviços" />
+          <span id="servicesLinkText">Veja nossos Serviços</span>
+        </a>
+        <a href="contact.html" class="btn-link">
+          <img src="assets/bureau administratif.jpg" alt="Contato" />
+          <span id="contactLinkText">Entre em Contato</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="our-commitment">
+      <h2 id="commitmentTitle">Nosso Compromisso</h2>
+      <ul id="commitmentList">
+        <li>✔ Atendimento personalizado</li>
+        <li>✔ Transparência nas transações</li>
+        <li>✔ Parcerias com líderes de mercado</li>
+        <li>✔ Suporte multilíngue e acessibilidade</li>
       </ul>
     </section>
 
-    <section id="about">
-      <h2 id="aboutTitle">Sobre Nós</h2>
-      <p id="aboutText">
-        DPS Multiservices é uma agência especializada em serviços migratórios, oferecendo assessoria especializada e atendimento personalizado para cada cliente. Nossa missão é facilitar os processos administrativos, legais e pessoais relacionados à imigração, garantindo um serviço de alta qualidade, sigiloso e adaptado às necessidades individuais. Trabalhamos com profissionalismo, empatia e compromisso para assegurar que nossos clientes tenham uma jornada migratória tranquila, transparente e em conformidade com as exigências legais do país de destino.
+    <section class="hours">
+      <h2 id="hoursTitle">Horário de Funcionamento</h2>
+      <p id="hoursText">📅 Segunda : 09:00 - 19:00<br> 📅 Terça-feira : 09:00 - 19:00 <br> 📅 Quarta-feira : 09:00 - 19:00 <br> 📅 Quinta-feira : 09:00 - 19:00 <br> 📅 Sexta-feira : 09:00 - 19:00 <br> 📅 Sábado : 09:00 - 19:00 <br> ⛔ Domingo: Fechado </p>
+    </section>
+
+    <section class="map">
+      <h2 id="mapTitle">Encontre-nos</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4698865221662!2d-46.628145599999996!3d-23.5515617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a35b7fb83b%3A0x2933577df743dce5!2sDP%C2%B4S%20MULTI-SERVICES%20SERVICES%20ADMINISTRATIVOS%20E%20MIGRATORIOS%20EM%20GERAL%20ENVIO%20%26%20RECEBIMENTO%20DE%20DINHEIRO%20MONEYGRAM%2C%20MONCASH%20ETC...!5e0!3m2!1sfr!2sbr!4v1746480496687!5m2!1sfr!2sbr" 
+        width="400" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        title="Mapa da localização da DPS Multiservices">
+      </iframe>
+    </section>
+
+    <section class="testimonials">
+      <h2 id="testimonialsTitle">O que dizem nossos clientes</h2>
+      <blockquote>“Serviço rápido e confiável. Recomendo!” — João C.</blockquote>
+      <blockquote>“Equipe muito atenciosa. Fiquei muito satisfeito.” — Maria D.</blockquote>
+    </section>
+
+    <section class="seo-text">
+      <h2 id="seoTitle">Serviços de envio de dinheiro | Transferência internacional segura</h2>
+      <p id="seoText">
+        Com a DPS Multiservices, você pode realizar <strong>transferências internacionais</strong> com segurança, rapidez e tarifas acessíveis.
       </p>
     </section>
 
     <section id="contact">
       <h2 id="contactTitle">Contato</h2>
-      <p id="emailText">Email: multiservicessp2023@gmail.com</p>
+      <p id="emailText">Email: dps.migration@gmail.com</p>
       <p id="phoneText">Telefone: +55 (11) 95348-2936</p>
     </section>
   </main>
 
   <footer>
-    <p id="footerText">&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
-    <a href="privacy-policy.html">Política de Privacidade</a> | 
-    <a href="terms.html">Termos de Uso</a>
-  
+    <p id="footerText">
+      © 2025 DPS Multiservices. <span id="rightsText">Todos os direitos reservados.</span>
+      <a href="privacy-policy.html" id="privacyLink">Política de privacidade</a> |
+      <a href="terms.html" id="termsLink">Termos de uso</a>
+    </p>
   </footer>
 
-  <!-- Script de tradução -->
   <script>
     const translations = {
       pt: {
+        mapTitle: "Encontre-nos",
+        exploreTitle: "Explore mais",
+        servicesLinkText: "Veja nossos Serviços",
+        contactLinkText: "Entre em Contato",
         welcomeText: "Bem-vindo à DPS Multiservices",
-        servicesTitle: "Nossos Serviços",
-        servicesList: [
-          "Consultoria para imigração",
-          "Assistência com vistos",
-          "Traduções juramentadas",
-          "Apoio jurídico"
+        aboutTitle: "Quem Somos",
+        aboutText: "A DPS Multiservices é uma empresa dedicada a facilitar serviços financeiros confiáveis, com foco em transferências internacionais de dinheiro.",
+        commitmentTitle: "Nosso Compromisso",
+        commitmentList: [
+          "✔ Atendimento personalizado",
+          "✔ Transparência nas transações",
+          "✔ Parcerias com líderes de mercado",
+          "✔ Suporte multilíngue e acessibilidade"
         ],
-        aboutTitle: "Sobre Nós",
-        aboutText: "DPS Multiservices é uma agência especializada em serviços migratórios, oferecendo assessoria especializada e atendimento personalizado para cada cliente. Nossa missão é facilitar os processos administrativos, legais e pessoais relacionados à imigração, garantindo um serviço de alta qualidade, sigiloso e adaptado às necessidades individuais. Trabalhamos com profissionalismo, empatia e compromisso para assegurar que nossos clientes tenham uma jornada migratória tranquila, transparente e em conformidade com as exigências legais do país de destino.",
+        hoursTitle: "Horário de Funcionamento",
+        hoursText: "📅 Segunda-feira : 09:00 - 19:00 <br> 📅 Terça-feira : 09:00 - 19:00 <br> 📅 Quarta-feira : 09:00 - 19:00 <br> 📅 Quinta-feira : 09:00 - 19:00 <br> 📅 Sexta-feira : 09:00 - 19:00 <br> 📅 Sàbado : 09:00 - 19:00 <br> ⛔ Domingo: Fechado",
+        testimonialsTitle: "O que dizem nossos clientes",
+        seoTitle: "Serviços de envio de dinheiro | Transferência internacional segura",
+        seoText: "Com a DPS Multiservices, você pode realizar <strong>transferências internacionais</strong> com segurança, rapidez e tarifas acessíveis.",
         contactTitle: "Contato",
-        emailText: "Email: multiservicessp2023@gmail.com",
-phoneText: "Telefone: +55 (11) 95348-2936",
-footerText: "© 2025 DPS Multiservices. Todos os direitos reservados. Política de Privacidade | Termos de Uso"
-
-
+        emailText: "Email: dps.migration@gmail.com",
+        phoneText: "Telefone: +55 (11) 95348-2936",
+        footerText: "© 2025 DPS Multiservices. Todos os direitos reservados. Política de privacidade | Termos de uso"
       },
       en: {
+        mapTitle: "Find Us",
+        exploreTitle: "Explore more",
+        servicesLinkText: "See our Services",
+        contactLinkText: "Get in Touch",
         welcomeText: "Welcome to DPS Multiservices",
-        servicesTitle: "Our Services",
-        servicesList: [
-          "Immigration consulting",
-          "Visa assistance",
-          "Certified translations",
-          "Legal support"
+        aboutTitle: "Who We Are",
+        aboutText: "DPS Multiservices is a company dedicated to facilitating reliable financial services, with a focus on international money transfers.",
+        commitmentTitle: "Our Commitment",
+        commitmentList: [
+          "✔ Personalized service",
+          "✔ Transparency in transactions",
+          "✔ Partnerships with market leaders",
+          "✔ Multilingual support and accessibility"
         ],
-        aboutTitle: "About Us",
-        aboutText: "DPS Multiservices is an agency specialized in immigration services, providing in-depth expertise and personalized support for every client. Our mission is to simplify administrative, legal, and personal procedures related to immigration, ensuring high-quality, confidential, and tailored service. We work with professionalism, empathy, and precision to guide our clients through a smooth and compliant migration process that meets the legal standards of their destination country.",
+        hoursTitle: "Operating Hours",
+        hoursText: "📅 Monday: 09:00 - 19:00 <br> 📅 Tuesday: 09:00 - 19:00 <br> 📅 Wednesday: 09:00 - 19:00 <br> 📅 Thursday: 09:00 - 19:00 <br> 📅 Friday: 09:00 - 19:00 <br> 📅 Saturday: 09:00 - 19:00 <br> ⛔ Sunday: Closed",
+        testimonialsTitle: "What Our Clients Say",
+        seoTitle: "Money transfer services | Secure international transfers",
+        seoText: "With DPS Multiservices, you can perform <strong>international transfers</strong> safely, quickly, and with affordable rates.",
         contactTitle: "Contact",
-        emailText: "Email: multiservicessp2023@gmail.com",
+        emailText: "Email: dps.migration@gmail.com",
         phoneText: "Phone: +55 (11) 95348-2936",
         footerText: "© 2025 DPS Multiservices. All rights reserved. Privacy Policy | Terms of Use"
       },
       fr: {
+        mapTitle: "Trouvez-nous",
+        exploreTitle: "Explorez plus",
+        servicesLinkText: "Voir nos Services",
+        contactLinkText: "Contactez-nous",
         welcomeText: "Bienvenue chez DPS Multiservices",
-        servicesTitle: "Nos Services",
-        servicesList: [
-          "Consultation en immigration",
-          "Assistance pour les visas",
-          "Traductions assermentées",
-          "Soutien juridique"
+        aboutTitle: "Qui Nous Sommes",
+        aboutText: "DPS Multiservices est une entreprise dédiée à faciliter les services financiers fiables, en mettant l'accent sur les transferts d'argent internationaux.",
+        commitmentTitle: "Notre Engagement",
+        commitmentList: [
+          "✔ Service personnalisé",
+          "✔ Transparence dans les transactions",
+          "✔ Partenariats avec des leaders du marché",
+          "✔ Support multilingue et accessibilité"
         ],
-        aboutTitle: "À propos de nous",
-        aboutText: "DPS Multiservices est une agence spécialisée dans les services migratoires, offrant une expertise approfondie et un accompagnement personnalisé à chaque client. Notre mission est de faciliter les démarches administratives, juridiques et personnelles liées à l'immigration, en garantissant un service de qualité, confidentiel et adapté à chaque situation. Nous travaillons avec rigueur, empathie et professionnalisme afin d'assurer à nos clients un parcours migratoire clair, serein et conforme aux exigences légales de leur pays de destination.",
+        hoursTitle: "Horaires d'Ouverture",
+        hoursText: "📅 Lundi : 09:00 - 19:00 <br> 📅 Mardi : 09:00 - 19:00 <br> 📅 Mercredi : 09:00 - 19:00 <br> 📅 Jeudi : 09:00 - 19:00 <br> 📅 Vendredi : 09:00 - 19:00 <br> 📅 Samedi : 09:00 - 19:00 <br> ⛔ Dimanche : Fermé",
+        testimonialsTitle: "Ce Que Disent Nos Clients",
+        seoTitle: "Services de transfert d'argent | Transferts internationaux sécurisés",
+        seoText: "Avec DPS Multiservices, vous pouvez effectuer des <strong>transferts internationaux</strong> en toute sécurité, rapidement et avec des tarifs abordables.",
         contactTitle: "Contact",
-        emailText: "Email : multiservicessp2023@gmail.com",
-        phoneText: "Téléphone : +55 (11) 95348-2936",
+        emailText: "Email: dps.migration@gmail.com",
+        phoneText: "Téléphone: +55 (11) 95348-2936",
         footerText: "© 2025 DPS Multiservices. Tous droits réservés. Politique de confidentialité | Conditions d'utilisation"
       },
       es: {
+        mapTitle: "Encuéntranos",
+        exploreTitle: "Explorar más",
+        servicesLinkText: "Ver nuestros Servicios",
+        contactLinkText: "Contáctanos",
         welcomeText: "Bienvenido a DPS Multiservices",
-        servicesTitle: "Nuestros Servicios",
-        servicesList: [
-          "Consultoría de inmigración",
-          "Asistencia de visas",
-          "Traducciones juradas",
-          "Apoyo legal"
+        aboutTitle: "Quiénes Somos",
+        aboutText: "DPS Multiservices es una empresa dedicada a facilitar servicios financieros confiables, con un enfoque en transferencias de dinero internacionales.",
+        commitmentTitle: "Nuestro Compromiso",
+        commitmentList: [
+          "✔ Servicio personalizado",
+          "✔ Transparencia en transacciones",
+          "✔ Asociaciones con líderes del mercado",
+          "✔ Soporte multilingüe y accesibilidad"
         ],
-        aboutTitle: "Sobre Nosotros",
-        aboutText: "DPS Multiservices es una agencia especializada en servicios migratorios, que ofrece asesoramiento experto y atención personalizada a cada cliente. Nuestra misión es facilitar todos los trámites administrativos, legales y personales relacionados con la inmigración, garantizando un servicio de calidad, confidencial y adaptado a cada situación individual. Trabajamos con profesionalismo, empatía y compromiso para asegurar que nuestros clientes vivan un proceso migratorio claro, tranquilo y conforme a las normativas legales del país de destino.",
+        hoursTitle: "Horario de Atención",
+        hoursText: "📅 Lunes: 09:00 - 19:00 <br> 📅 Martes: 09:00 - 19:00 <br> 📅 Miércoles: 09:00 - 19:00 <br> 📅 Jueves: 09:00 - 19:00 <br> 📅 Viernes: 09:00 - 19:00 <br> 📅 Sábado: 09:00 - 19:00 <br> ⛔ Domingo: Cerrado",
+        testimonialsTitle: "Lo que Dicen Nuestros Clientes",
+        seoTitle: "Servicios de envío de dinero | Transferencias internacionales seguras",
+        seoText: "Con DPS Multiservices, puedes realizar <strong>transferencias internacionales</strong> de forma segura, rápida y con tarifas accesibles.",
         contactTitle: "Contacto",
-        emailText: "Correo: multiservicessp2023@gmail.com",
+        emailText: "Email: dps.migration@gmail.com",
         phoneText: "Teléfono: +55 (11) 95348-2936",
-        footerText: "© 2025 DPS Multiservices. Todos los derechos reservados., politica de privacidad | Términos de uso"
+        footerText: "© 2025 DPS Multiservices. Todos los derechos reservados. Política de privacidad | Términos de uso"
       }
     };
 
@@ -149,25 +277,27 @@ footerText: "© 2025 DPS Multiservices. Todos os direitos reservados. Política 
       const lang = languageSelect.value;
       const t = translations[lang];
 
+      document.getElementById("mapTitle").textContent = t.mapTitle;
+      document.getElementById("exploreTitle").textContent = t.exploreTitle;
+      document.getElementById("servicesLinkText").textContent = t.servicesLinkText;
+      document.getElementById("contactLinkText").textContent = t.contactLinkText;
       document.getElementById("welcomeText").textContent = t.welcomeText;
-      document.getElementById("servicesTitle").textContent = t.servicesTitle;
-
-      const servicesList = document.getElementById("servicesList");
-      servicesList.innerHTML = "";
-      t.servicesList.forEach(service => {
-        const li = document.createElement("li");
-        li.textContent = service;
-        servicesList.appendChild(li);
-      });
-
       document.getElementById("aboutTitle").textContent = t.aboutTitle;
-      document.getElementById("aboutText").textContent = t.aboutText;
-
+      document.getElementById("aboutText").innerHTML = t.aboutText;
+      document.getElementById("commitmentTitle").textContent = t.commitmentTitle;
+      document.getElementById("commitmentList").innerHTML = t.commitmentList.map(item => `<li>${item}</li>`).join('');
+      document.getElementById("hoursTitle").textContent = t.hoursTitle;
+      document.getElementById("hoursText").innerHTML = t.hoursText;
+      document.getElementById("testimonialsTitle").textContent = t.testimonialsTitle;
+      document.getElementById("seoTitle").textContent = t.seoTitle;
+      document.getElementById("seoText").innerHTML = t.seoText;
       document.getElementById("contactTitle").textContent = t.contactTitle;
       document.getElementById("emailText").textContent = t.emailText;
       document.getElementById("phoneText").textContent = t.phoneText;
 
-      document.getElementById("footerText").textContent = t.footerText;
+      document.getElementById("rightsText").textContent = t.footerText.split(". ")[1];
+      document.getElementById("privacyLink").textContent = t.footerText.split(" | ")[0].split(". ").pop();
+      document.getElementById("termsLink").textContent = t.footerText.split(" | ")[1];
     });
   </script>
 </body>

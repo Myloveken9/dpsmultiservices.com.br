@@ -3,29 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contato - DPS Multiservices</title>
+  <meta name="description" content="Consultoria migratória, vistos, cidadania e muito mais. Atendimento em português, inglês, français e español.">
+  <title>DPS Multiservices - Agência de Serviços Migratórios</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .language-section {
-      display: none;
+    .quick-links {
+      text-align: center;
+      margin: 3em 1em;
     }
-    .form-message {
-      margin-top: 10px;
+
+    .quick-links h2 {
+      font-size: 1.6em;
+      margin-bottom: 1em;
+    }
+
+    .link-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .btn-link {
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid #ccc;
+      padding: 1em;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 200px;
+    }
+
+    .btn-link:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .btn-link img {
+      width: 100%;
+      height: auto;
+      max-height: 120px;
+      object-fit: cover;
+      margin-bottom: 0.5em;
+      border-radius: 6px;
+    }
+
+    .btn-link span {
+      display: block;
       font-weight: bold;
+      font-size: 1.1em;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-top">
+    <div class="header-top" style="text-align: center;">
       <div class="logo">
-        <img src="assets/logo.jpeg" alt="DPS Multiservices" />
+        <img src="assets/logo.jpeg" alt="Logo da DPS Multiservices" width="120" />
       </div>
-      <div class="welcome">
-        <h1 id="main-title">Contate-Nos</h1>
-      </div>
+      <h1 id="welcomeText">Bem-vindo à DPS Multiservices</h1>
     </div>
-    <nav>
+
+    <nav style="text-align: center;">
       <label for="languageSelect">🌐 Idioma:</label>
       <select id="languageSelect">
         <option value="pt">Português 🇧🇷</option>
@@ -36,155 +77,116 @@
     </nav>
   </header>
 
-  <nav class="main-nav">
-    <h2>
-      <a href="index.html">Início</a> | 
-      <a href="services.html">Serviços</a>
-    </h2>
-  </nav>
-
   <main>
-    <!-- Português -->
-    <section id="contact-pt" class="language-section">
-      <h2>Formulário de Contato</h2>
-      <form action="https://formspree.io/f/xwpoljog" method="POST">
-        <label for="name-pt">Nome:</label><br>
-        <input type="text" id="name-pt" name="name" required><br><br>
-
-        <label for="email-pt">Email:</label><br>
-        <input type="email" id="email-pt" name="email" required><br><br>
-
-        <label for="message-pt">Mensagem:</label><br>
-        <textarea id="message-pt" name="message" rows="4" required></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-      </form>
-      <div class="form-message"></div>
+    <section class="quick-links">
+      <h2 id="exploreMoreTitle">Explore mais</h2>
+      <div class="link-buttons">
+        <a href="services.html" class="btn-link">
+          <img src="assets/bureau (6).jpg" alt="Serviços" />
+          <span id="servicesLinkText">Veja nossos Serviços</span>
+        </a>
+        <a href="index.html" class="btn-link">
+          <img src="assets/bureau (7).jpg" alt="Inicio" />
+          <span id="aboutLinkText">Quem somos</span>
+        </a>
+      </div>
     </section>
 
-    <!-- Francês -->
-    <section id="contact-fr" class="language-section">
-      <h2>Formulaire de Contact</h2>
+    <section>
+      <h2 id="formTitle">Formulário de Contato</h2>
       <form action="https://formspree.io/f/xwpoljog" method="POST">
-        <label for="name-fr">Nom :</label><br>
-        <input type="text" id="name-fr" name="name" required><br><br>
+        <label for="name" id="labelName">Nome:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email-fr">Email :</label><br>
-        <input type="email" id="email-fr" name="email" required><br><br>
+        <label for="email" id="labelEmail">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-        <label for="message-fr">Message :</label><br>
-        <textarea id="message-fr" name="message" rows="4" required></textarea><br><br>
+        <label for="message" id="labelMessage">Mensagem:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
-        <input type="submit" value="Envoyer">
+        <input type="submit" id="submitButton" value="Enviar">
       </form>
-      <div class="form-message"></div>
-    </section>
-
-    <!-- Inglês -->
-    <section id="contact-en" class="language-section">
-      <h2>Contact Form</h2>
-      <form action="https://formspree.io/f/xwpoljog" method="POST">
-        <label for="name-en">Name:</label><br>
-        <input type="text" id="name-en" name="name" required><br><br>
-
-        <label for="email-en">Email:</label><br>
-        <input type="email" id="email-en" name="email" required><br><br>
-
-        <label for="message-en">Message:</label><br>
-        <textarea id="message-en" name="message" rows="4" required></textarea><br><br>
-
-        <input type="submit" value="Send">
-      </form>
-      <div class="form-message"></div>
-    </section>
-
-    <!-- Espanhol -->
-    <section id="contact-es" class="language-section">
-      <h2>Formulario de Contacto</h2>
-      <form action="https://formspree.io/f/xwpoljog" method="POST">
-        <label for="name-es">Nombre:</label><br>
-        <input type="text" id="name-es" name="name" required><br><br>
-
-        <label for="email-es">Correo electrónico:</label><br>
-        <input type="email" id="email-es" name="email" required><br><br>
-
-        <label for="message-es">Mensaje:</label><br>
-        <textarea id="message-es" name="message" rows="4" required></textarea><br><br>
-
-        <input type="submit" value="Enviar">
-      </form>
-      <div class="form-message"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
+    <p id="footerText">&copy; 2025 DPS Multiservices. Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    const languageSelect = document.getElementById('languageSelect');
-    const mainTitle = document.getElementById('main-title');
-
-    const titles = {
-      pt: 'Contate-Nos',
-      en: 'Contact Us',
-      fr: 'Contactez-Nous',
-      es: 'Contáctenos'
+    const translations = {
+      pt: {
+        welcomeText: "Bem-vindo à DPS Multiservices",
+        formTitle: "Formulário de Contato",
+        labelName: "Nome:",
+        labelEmail: "Email:",
+        labelMessage: "Mensagem:",
+        submitButton: "Enviar",
+        footerText: "© 2025 DPS Multiservices. Todos os direitos reservados.",
+        exploreMoreTitle: "Explore mais",
+        servicesLinkText: "Veja nossos Serviços",
+        aboutLinkText: "Quem somos"
+      },
+      en: {
+        welcomeText: "Welcome to DPS Multiservices",
+        formTitle: "Contact Form",
+        labelName: "Name:",
+        labelEmail: "Email:",
+        labelMessage: "Message:",
+        submitButton: "Send",
+        footerText: "© 2025 DPS Multiservices. All rights reserved.",
+        exploreMoreTitle: "Explore more",
+        servicesLinkText: "View Our Services",
+        aboutLinkText: "About Us"
+      },
+      fr: {
+        welcomeText: "Bienvenue chez DPS Multiservices",
+        formTitle: "Formulaire de Contact",
+        labelName: "Nom :",
+        labelEmail: "Email :",
+        labelMessage: "Message :",
+        submitButton: "Envoyer",
+        footerText: "© 2025 DPS Multiservices. Tous droits réservés.",
+        exploreMoreTitle: "Explorez davantage",
+        servicesLinkText: "Voir nos services",
+        aboutLinkText: "À propos de nous"
+      },
+      es: {
+        welcomeText: "Bienvenido a DPS Multiservices",
+        formTitle: "Formulario de Contacto",
+        labelName: "Nombre:",
+        labelEmail: "Correo electrónico:",
+        labelMessage: "Mensaje:",
+        submitButton: "Enviar",
+        footerText: "© 2025 DPS Multiservices. Todos los derechos reservados.",
+        exploreMoreTitle: "Explorar más",
+        servicesLinkText: "Ver nuestros servicios",
+        aboutLinkText: "Quiénes somos"
+      }
     };
 
-    function showLanguage(language) {
-      document.querySelectorAll('.language-section').forEach(section => {
-        section.style.display = 'none';
-      });
-
-      const activeSection = document.getElementById('contact-' + language);
-      if (activeSection) {
-        activeSection.style.display = 'block';
-      }
-
-      mainTitle.textContent = titles[language] || 'Contato';
+    function updateLanguage(lang) {
+      const t = translations[lang] || translations["pt"];
+      document.getElementById("welcomeText").textContent = t.welcomeText;
+      document.getElementById("formTitle").textContent = t.formTitle;
+      document.getElementById("labelName").textContent = t.labelName;
+      document.getElementById("labelEmail").textContent = t.labelEmail;
+      document.getElementById("labelMessage").textContent = t.labelMessage;
+      document.getElementById("submitButton").value = t.submitButton;
+      document.getElementById("footerText").textContent = t.footerText;
+      document.getElementById("exploreMoreTitle").textContent = t.exploreMoreTitle;
+      document.getElementById("servicesLinkText").textContent = t.servicesLinkText;
+      document.getElementById("aboutLinkText").textContent = t.aboutLinkText;
     }
 
-    const userLang = navigator.language.slice(0, 2);
-    const defaultLang = ['pt', 'en', 'fr', 'es'].includes(userLang) ? userLang : 'pt';
+    const userLang = (navigator.language || navigator.userLanguage).substring(0, 2);
+    if (translations[userLang]) {
+      document.getElementById("languageSelect").value = userLang;
+      updateLanguage(userLang);
+    }
 
-    languageSelect.value = defaultLang;
-    showLanguage(defaultLang);
-
-    languageSelect.addEventListener('change', (e) => {
-      showLanguage(e.target.value);
-    });
-
-    // Intercepter les envois et afficher un message dynamique
-    const forms = document.querySelectorAll("form");
-
-    forms.forEach(form => {
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        const messageBox = form.nextElementSibling;
-
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          });
-
-          if (response.ok) {
-            messageBox.textContent = "✅ Merci ! Votre message a bien été envoyé.";
-            messageBox.style.color = "green";
-            form.reset();
-          } else {
-            messageBox.textContent = "❌ Une erreur est survenue. Veuillez réessayer.";
-            messageBox.style.color = "red";
-          }
-        } catch (error) {
-          messageBox.textContent = "⚠️ Erreur réseau. Vérifiez votre connexion.";
-          messageBox.style.color = "orange";
-        }
-      });
+    document.getElementById("languageSelect").addEventListener("change", (e) => {
+      updateLanguage(e.target.value);
     });
   </script>
 </body>
