@@ -66,10 +66,29 @@
       font-weight: bold;
       font-size: 1.1em;
     }
+
+    .side-by-side {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.side-by-side img {
+  width: 48%;
+}
+
+
   </style>
 </head>
 <body>
   <header>
+    <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     <div class="header-top">
       <div class="logo">
         <img src="assets/logo.jpeg" alt="Logo da DPS Multiservices" />
@@ -87,39 +106,81 @@
         <option value="es">Español 🇪🇸</option>
       </select>
     </nav>
+    
   </header>
 
+  
   <main>
     <section class="about-us">
       <h2 id="aboutTitle">Quem Somos</h2>
       <p id="aboutText">
-        A <strong>DPS Multiservices</strong> é uma empresa dedicada a facilitar serviços financeiros confiáveis, com foco em transferências internacionais de dinheiro.
-      </p>
+        A <strong>DPS Multiservices</strong> é uma empresa especializada em assessoria para estrangeiros no Brasil. Atuamos de forma séria e comprometida na regularização de documentos, processos de imigração, residência, naturalização e outros serviços legais voltados à comunidade imigrante.
+
+Nosso objetivo é facilitar a vida de quem escolheu o Brasil para viver, oferecendo todo o suporte necessário com ética, transparência e profissionalismo. Além disso, realizamos serviços financeiros, como transferências internacionais de dinheiro, de forma rápida, segura e confiável, para qualquer país do mundo. </p>
+<br><br>
+<div class="side-by-side">
+  <img src="assets/quem somos.png" alt="">
+  <img src="assets/bureau dps.jpg" alt="">
+  <img src="assets/bureau administratif.jpg" alt="">
+  <img src="assets/process.png" alt="">
+</div>
+<br></br>
+<i> Na DP’s Multi-Services, trabalhamos para conectar pessoas, quebrar barreiras e transformar processos burocráticos em soluções simples e acessíveis. </i>
+<div class="side-by-side">
+<img src="assets/bureau (3).jpg" alt="">
+<img src="assets/bureau (4).jpg" alt="">
+<img src="assets/bureau (5).jpg" alt="">
+<img src="assets/bureau (6).jpg" alt="">
+
     </section>
+    <section id="nossaEquipe">
+  <h2>Expertise</h2>
+  <p>Conheça os profissionais dedicados que tornam nossos serviços excepcionais.</p>
+  <div class="side-by-side">
+    <img src="assets/bureau dps.jpg" alt="Nossa equipe em reunião">
+    <img src="assets/bureau administratif.jpg" alt="Ambiente de trabalho moderno">
+  </div>
+</section>
+
 
     <!-- Nouvelle section ajoutée -->
     <section class="additional-section">
-      <div class="content">
-        <img src="assets/Dps.jpg" alt="." />
-        <h2>DP'S Multiservices</h2>
-        <p>DP'S Multi-Services Agency specializes in providing comprehensive migration solutions tailored to individual needs. Our expert team navigates the complexities of immigration processes, offering personalized support to ensure a seamless transition and successful integration into new environments.</p>
-        <img src="assets/administration.jpg" alt="." />
+      <div class="content"></div>
+        <br>
         <h3 id="financialServicesTitle">O que nós oferecemos</h3>
         <p id="financialServicesText">
-          Oferecemos soluções migratórias sob medida, combinando expertise jurídica e suporte personalizado para uma mobilidade bem-sucedida.     </p>
+          Oferecemos soluções migratórias sob medida, combinando expertise jurídica e suporte personalizado para uma mobilidade bem-sucedida. </p>
       </div>
+      <br>
+
       <div class="content">
-        <img src="assets/passport.png" alt="Transferts internationaux" />
-        <h2>DP'S Multi-Services And Migration</h2>
-        <p>DP'S Multi-Services Agency offers comprehensive migration services, including personalized visa assistance, legal support, and cultural integration programs. Our dedicated team ensures a smooth transition for clients seeking new opportunities abroad, adhering to all legal and regulatory requirements.</p>
-        <img src="assets/passport2.png" alt="Transferts internationaux" />
+      <div class="side-by-side">
+        <img src="assets/Passporte.png" alt="Transferts internationaux" />
+      <img src="assets/visa.png" alt="Visa" />
+    </div>
+    <br><br>
+        <h2>DP'S Multi-Services naturalization And Migration</h2>
+        <div class="side-by-side">
+        <img src="assets/naturalização 3.png" alt="Visa" />
+        <img src="assets/Passporte.png" alt="Transferts internationaux" />
+      </div>
         <h3 id="internationalTransfersTitle">O que nós oferecemos</h3>
         <p id="internationalTransfersText">
           Facilite suas transferências de dinheiro internacionais com nosso serviço rápido e seguro. Colaboramos com parceiros confiáveis para garantir a segurança de suas transações.
         </p>
       </div>
+      <br>
+      <div class="TransferenciasInternacionais">
+      <h2>Transferências Internacionais</h2>
+      <div class="side-by-side">
+        <img src="assets/moneygram.png" alt="Transferência Internacional" />
+        <img src="assets/caribe express.png" alt="Transferência Internacional 1" />
+        <img src="assets/cam.jpg" alt="Transferência Internacional 2" />
+        <img src="assets/ria.jpg" alt="Transferência Internacional 3" />
+        <img src="assets/unitransfert.png" alt="Transferência Internacional 4" />
+        <img src="assets/moncash.jpeg" alt="">
+      </div>
     </section>
-
     <section class="quick-links">
       <h2 id="exploreTitle">Explore mais</h2>
       <div class="link-buttons">
@@ -193,6 +254,7 @@
   <script>
     const translations = {
       pt: {
+        
         financialServicesTitle: "O que nós oferecemos",
         financialServicesText: "Oferecemos soluções migratórias sob medida, combinando expertise jurídica e suporte personalizado para uma mobilidade bem-sucedida.",
         internationalTransfersTitle: "O que nós oferecemos",
@@ -203,7 +265,7 @@
         contactLinkText: "Entre em Contato",
         welcomeText: "Bem-vindo à DPS Multiservices",
         aboutTitle: "Quem Somos",
-        aboutText: "A DPS Multiservices é uma empresa dedicada a facilitar serviços financeiros confiáveis, com foco em transferências internacionais de dinheiro.",
+        aboutText: "A DP’s Multi-Services é uma empresa especializada em assessoria para estrangeiros no Brasil. Atuamos de forma séria e comprometida na regularização de documentos, processos de imigração, residência, naturalização e outros serviços legais voltados à comunidade imigrante. Nosso objetivo é facilitar a vida de quem escolheu o Brasil para viver, oferecendo todo o suporte necessário com ética, transparência e profissionalismo. Além disso, realizamos serviços financeiros, como transferências internacionais de dinheiro, de forma rápida, segura e confiável, para qualquer país do mundo. <br><br> <i> Na DP’s Multi-Services, trabalhamos para conectar pessoas, quebrar barreiras e transformar processos burocráticos em soluções simples e acessíveis.</i>",
         commitmentTitle: "Nosso Compromisso",
         commitmentList: [
           "✔ Atendimento personalizado",
@@ -232,7 +294,7 @@
         contactLinkText: "Get in Touch",
         welcomeText: "Welcome to DPS Multiservices",
         aboutTitle: "Who We Are",
-        aboutText: "DPS Multiservices is a company dedicated to facilitating reliable financial services, with a focus on international money transfers.",
+        aboutText: "DP’s Multi-Services is a company specialized in providing assistance to foreigners living in Brazil. We are dedicated to helping with the legalization of documents, immigration processes, residence permits, naturalization, and other essential legal services for the immigrant community. Our mission is to simplify the lives of immigrants by offering reliable, transparent, and professional support, always guided by ethics, responsibility, and efficiency. In addition, we provide financial services, including fast, secure, and reliable international money transfers to any country in the world. <br><br> <i> At DP’s Multi-Services, we are committed to connecting people, breaking barriers, and transforming complex bureaucratic processes into simple and accessible solutions.</i>",
         commitmentTitle: "Our Commitment",
         commitmentList: [
           "✔ Personalized service",
@@ -251,6 +313,7 @@
         footerText: "© 2025 DPS Multiservices. All rights reserved. Privacy Policy | Terms of Use"
       },
       fr: {
+
         financialServicesTitle: "Ce que nous proposons",
         financialServicesText: "Nous offrons des solutions migratoires sur mesure, alliant expertise juridique et accompagnement personnalisé pour une mobilité réussie.",
         internationalTransfersTitle: "Ce que nous proposons",
@@ -261,7 +324,7 @@
         contactLinkText: "Contactez-nous",
         welcomeText: "Bienvenue chez DPS Multiservices",
         aboutTitle: "Qui Nous Sommes",
-        aboutText: "DPS Multiservices est une entreprise dédiée à faciliter les services financiers fiables, en mettant l'accent sur les transferts d'argent internationaux.",
+        aboutText: "DP’s Multi-Services est une entreprise spécialisée dans l’assistance aux étrangers vivant au Brésil. Nous accompagnons nos clients dans la régularisation de leurs documents, les démarches d’immigration, de résidence et de naturalisation, ainsi que dans d’autres services administratifs essentiels. Notre mission est de rendre la vie des immigrés plus simple, en offrant un accompagnement personnalisé, fiable et professionnel, avec intégrité, transparence et efficacité. En complément, nous proposons également des services financiers, notamment des transferts internationaux d’argent vers tous les pays, de manière rapide, sûre et sécurisée. <br><br>  <i> Chez DP’s Multi-Services, nous œuvrons chaque jour pour connecter les personnes, supprimer les barrières et transformer les démarches complexes en solutions accessibles et efficaces. </i>",
         commitmentTitle: "Notre Engagement",
         commitmentList: [
           "✔ Service personnalisé",
@@ -290,7 +353,7 @@
         contactLinkText: "Contáctanos",
         welcomeText: "Bienvenido a DPS Multiservices",
         aboutTitle: "Quiénes Somos",
-        aboutText: "DPS Multiservices es una empresa dedicada a facilitar servicios financieros confiables, con un enfoque en transferencias de dinero internacionales.",
+        aboutText: "DP’s Multi-Services es una empresa especializada en brindar asistencia a extranjeros en Brasil. Nos dedicamos a gestionar la regularización de documentos, procesos migratorios, permisos de residencia, naturalización y otros trámites legales indispensables para la comunidad migrante. Nuestra misión es hacer que la vida de los inmigrantes sea más sencilla, brindando un servicio profesional, transparente y comprometido, siempre con ética y responsabilidad. Además, ofrecemos servicios financieros, incluyendo transferencias internacionales de dinero a cualquier país del mundo, de forma rápida, segura y confiable. <br><br> <i> En DP’s Multi-Services, trabajamos para conectar personas, derribar barreras y transformar procesos complejos en soluciones prácticas y accesibles.</i>",
         commitmentTitle: "Nuestro Compromiso",
         commitmentList: [
           "✔ Servicio personalizado",
@@ -316,6 +379,7 @@
       const lang = languageSelect.value;
       const t = translations[lang];
     
+      
       document.getElementById("financialServicesTitle").textContent = t.financialServicesTitle;
       document.getElementById("financialServicesText").innerHTML = t.financialServicesText;
       document.getElementById("internationalTransfersTitle").textContent = t.internationalTransfersTitle;
